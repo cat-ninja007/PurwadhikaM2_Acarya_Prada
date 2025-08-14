@@ -1,0 +1,112 @@
+/* ------------- RESETS ------------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ------------- ROOT ------------- */
+:root{
+    --font-primary: "Open Sans", sans-serif;
+    --font-secondary: "Modern No. 20", serif;
+    --bg-gray: #F4F5F7;
+    --bg-light-gray: #C4C4C4;
+}
+
+/* ------------- HEADER ------------- */
+.header{
+    background:var(--bg-gray);
+    font-family:var(--font-primary);
+}
+
+/* ===== HEADER-TOP ===== */
+.header-top{
+    position:relative;
+    background:var(--bg-light-gray);
+    padding:16px 0 17px;
+}
+
+.shop-collection p{
+    font-size:14px;
+    text-decoration:underline;
+    text-align:center;
+    color:#000;
+}
+
+.header-top-right{
+    position:absolute;
+    top:12px;
+    right:20px;
+}
+.header-top-right nav ul{
+    display:flex;
+    gap:15px;
+    list-style:none;
+}
+.header-top-right nav ul li a{
+    text-decoration:none;
+    color:#000;
+    font-size:14px;
+}
+
+/* ===== HEADER-BOTTOM ===== */
+.header-bottom-title h1{
+    font-family:var(--font-secondary);
+    font-size:48px;
+    text-align:center;
+    padding:21px 0 19px;
+    color:#000;
+}
+
+.header-bottom-navigation{
+    padding-bottom:18px;
+}
+.header-bottom-navigation nav ul{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px 50px;          /* row-gap column-gap */
+    list-style:none;
+}
+.header-bottom-navigation nav ul li a{
+    font-family:var(--font-secondary);
+    font-size:18px;
+    text-decoration:none;
+    color:#000;
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+
+/* tablet & smaller */
+@media (max-width: 768px){
+    .header-top-right{
+        position:static;
+        margin-top:8px;
+    }
+    .header-top-right nav ul{
+        justify-content:center;
+    }
+
+    .header-bottom-title h1{
+        font-size:36px;
+    }
+    .header-bottom-navigation nav ul{
+        gap:20px 30px;
+    }
+}
+
+/* phones */
+@media (max-width: 480px){
+    .shop-collection p{
+        font-size:12px;
+        padding:0 10px;
+    }
+
+    .header-bottom-title h1{
+        font-size:28px;
+    }
+    .header-bottom-navigation nav ul{
+        flex-direction:column;
+        gap:12px;
+    }
+}

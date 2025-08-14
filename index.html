@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./assets/styles/style.css" />
+		<link rel="stylesheet" href="./assets/styles/header.css" />
+		<link rel="stylesheet" href="./assets/styles/jumbotron.css" />
+		<link rel="stylesheet" href="./assets/styles/new-arrival.css" />
+		<link rel="stylesheet" href="./assets/styles/light-layers.css" />
+		<link rel="stylesheet" href="./assets/styles/lapradina.css" />
+		<link rel="stylesheet" href="./assets/styles/footer.css" />
+
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/03c471e0fe.js"
+			crossorigin="anonymous"></script>
+		<title>Prada | Exercise 1</title>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<!-- 1.  SALE / SIGN-IN BAR -->
+				<div class="header-top">
+					<div class="shop-collection">
+						<p>SHOP THE SALE COLLECTION</p>
+					</div>
+					<div class="header-top-right">
+						<nav>
+							<ul>
+								<li class="sign-in">
+									<a href="/sign-in">Sign In</a> /
+									<a href="/register">Register</a>
+								</li>
+								<li class="heart-o">
+									<a href="/like"><i class="fa-regular fa-heart"></i></a>
+								</li>
+								<li>
+									<a href="/checkout"
+										><i class="fa-solid fa-bag-shopping"></i> Bag</a
+									>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<!-- 2.  PRADA + BURGER (mobile) -->
+				<div class="header-bottom">
+					<div class="header-bottom-title">
+						<h1>PRADA</h1>
+					</div>
+					<button id="burger" aria-label="Toggle navigation">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+
+				<!-- 3.  DESKTOP NAV (hidden on mobile) -->
+				<div class="header-bottom-navigation">
+					<nav id="main-nav-desktop">
+						<ul>
+							<li><a href="/women">Women</a></li>
+							<li><a href="/men">Men</a></li>
+							<li><a href="/children">Children</a></li>
+							<li><a href="/sale">Sale</a></li>
+							<li><a href="/new-in">New In</a></li>
+							<li><a href="/home-collection">Home collection</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<!-- 4.  MOBILE DRAWER (hidden by default) -->
+				<nav id="main-nav-mobile" class="mobile-nav">
+					<button id="close-menu" aria-label="Close menu">&times;</button>
+					<ul>
+						<li><a href="/women">Women</a></li>
+						<li><a href="/men">Men</a></li>
+						<li><a href="/children">Children</a></li>
+						<li><a href="/sale">Sale</a></li>
+						<li><a href="/new-in">New In</a></li>
+						<li><a href="/home-collection">Home collection</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<script>
+            const burger   = document.getElementById('burger');
+            const closeBtn = document.getElementById('close-menu');
+            const nav      = document.getElementById('main-nav-mobile');
+          
+            const toggleNav = () => nav.classList.toggle('open');
+            burger?.addEventListener('click', toggleNav);
+            closeBtn?.addEventListener('click', toggleNav);
+          </script>
+	</body>
+</html>
